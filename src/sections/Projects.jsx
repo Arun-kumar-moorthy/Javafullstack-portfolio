@@ -21,8 +21,8 @@ const Projects = () => {
     }, []);
 
     return (
-        <section className="w-full flex justify-center py-20 overflow-hidden" id="projects">
-            <div className="section-container w-full">
+        <section className="w-full relative overflow-hidden" id="projects">
+            <div className="section-container">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}

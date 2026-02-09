@@ -8,7 +8,7 @@ const ProjectCard = ({ project }) => {
                 style={project.logoStyle}
             >
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
-                <span className="text-6xl md:text-8xl drop-shadow-2xl">{project.title.charAt(0)}</span>
+                <span className="text-6xl md:text-8xl drop-shadow-2xl">{project.icon || project.title.charAt(0)}</span>
             </div>
 
             <div className="p-6 md:p-8 flex-1 flex flex-col">

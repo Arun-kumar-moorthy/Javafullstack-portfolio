@@ -18,12 +18,12 @@ const Hero = () => {
     }, [index, fullText]);
 
     return (
-        <section id="home" className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-10 pb-10">
+        <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
             {/* Background ambient shapes */}
             <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[140px] animate-pulse" />
             <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-magenta/10 rounded-full blur-[140px] animate-pulse delay-700" />
 
-            <div className="section-container relative z-10 text-center flex flex-col items-center justify-center min-h-[60vh]">
+            <div className="section-container flex flex-col items-center justify-center">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}

@@ -8,6 +8,7 @@ export const navLinks = [
 export const myProjects = [
     {
         title: "Student Management System",
+        icon: "🎓",
         desc: "A Java application developed to streamline student data management, including enrollment, academic records, attendance tracking, and administrative workflows.",
         subdesc: "Built using Core Java, JDBC, and MySQL. Features an easy-to-use interface and robust data management.",
         href: "#",
@@ -25,6 +26,7 @@ export const myProjects = [
     },
     {
         title: "Vegetable Shop Management System",
+        icon: "🥦",
         desc: "A Java application designed to manage inventory, dynamic pricing, and customer transactions.",
         subdesc: "Built using HTML, CSS, JavaScript, and React for the frontend, with Core Java, JDBC, and MySQL for the backend. Features a responsive user interface and secure, robust data management.",
         href: "#",
@@ -46,6 +48,7 @@ export const myProjects = [
     },
     {
         title: "Electronic System Simulation",
+        icon: "⚙️",
         desc: "A simulation project bridging hardware logic and software implementation.",
         subdesc: "Leveraged B.E. Electrical background to simulate algorithmic logic for electronic circuits using Java.",
         href: "#",
