@@ -12,7 +12,7 @@ const Contact = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, ease: "easeOut" }}
                     viewport={{ once: true }}
-                    className="mb-24 text-center"
+                    className="mb-12 text-center"
                 >
                     <h2 className="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tighter">
                         <span className="text-white">Let's</span>{" "}
