@@ -26,14 +26,17 @@ const Projects = () => {
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
                     viewport={{ once: true }}
-                    className="mb-10"
+                    className="mb-16 text-center"
                 >
-                    <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter gradient-text">
-                        Projects
+                    <h2 className="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tighter">
+                        <span className="text-white">Featured</span>{" "}
+                        <span className="gradient-text !text-[50px] md:!text-[75px] ml-2">Projects</span>
                     </h2>
-                    <p className="text-gray-400 text-lg mt-4">Selected works and contributions.</p>
+                    <p className="text-gray-400 text-lg md:text-2xl max-w-3xl mx-auto leading-relaxed">
+                        A selection of my recent work and core development contributions.
+                    </p>
                 </motion.div>
 
                 <div className="w-full h-[400px] md:h-[600px] mt-10 md:mt-20">

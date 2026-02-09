@@ -4,7 +4,7 @@ import { LinearGradient } from "react-text-gradients";
 
 const Hero = () => {
     const [text, setText] = useState("");
-    const fullText = "Arun Kumar";
+    const fullText = "HI, I AM  ARUN KUMAR";
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
@@ -12,44 +12,46 @@ const Hero = () => {
             const timeout = setTimeout(() => {
                 setText((prev) => prev + fullText[index]);
                 setIndex((prev) => prev + 1);
-            }, 150);
+            }, 100);
             return () => clearTimeout(timeout);
         }
     }, [index, fullText]);
 
     return (
-        <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-10 pb-20">
             {/* Background ambient shapes */}
-            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-pulse" />
-            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-magenta/20 rounded-full blur-[120px] animate-pulse delay-700" />
+            <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[140px] animate-pulse" />
+            <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-magenta/10 rounded-full blur-[140px] animate-pulse delay-700" />
 
-            <div className="section-container relative z-10 text-center">
+            <div className="section-container relative z-10 text-center flex flex-col items-center justify-center min-h-[80vh]">
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
                 >
-                    <h2 className="text-xl md:text-2xl font-medium text-gray-400 mb-4 tracking-wider uppercase">
-                        <span className="name">HI, I AM</span>{" "}
-                        <span className="brand !text-[40px] md:!text-[60px] ml-2">
-                            {text}
-                        </span>
+                    <h2
+                        className="text-4xl md:text-7xl font-black mb-10 tracking-tighter uppercase"
+                        style={{
+                            color: '#FFFFFF',
+                            textShadow: '0 0 15px rgba(255,255,255,0.4)',
+                            WebkitTextFillColor: '#FFFFFF'
+                        }}
+                    >
+                        {text}
+                        <span className="animate-blink ml-1 border-r-4 border-white"></span>
                     </h2>
-                    <h1 className="hero-title mb-8 tracking-tighter">
+                    <h1 className="hero-title mb-10 tracking-tighter">
                         Java Full Stack<br />Developer
                     </h1>
-                    <p className="max-w-2xl mx-auto text-gray-400 text-lg md:text-xl mb-12">
-                        Transitioning from Electrical Engineering with a passion for building scalable
-                        backend systems and interactive web experiences.
+                    <p className="max-w-3xl mx-auto text-gray-400 text-lg md:text-2xl mb-16 leading-relaxed">
+                        I specialize in Java Full Stack Development using Java, Spring Boot, React, and MySQL to build scalable, secure, and responsive web applications. My Electrical Engineering background strengthens my logical thinking, debugging skills, and ability to design efficient systems.
                     </p>
-                    <div className="flex flex-wrap justify-center gap-6">
-                        <a href="#projects" className="btn btn-primary">View Projects</a>
-                        <a href="#contact" className="btn btn-outline">Let's Talk</a>
+                    <div className="flex flex-wrap justify-center gap-8">
+                        <a href="#projects" className="btn btn-primary !px-12 !py-4 text-base">View Projects</a>
+                        <a href="#contact" className="btn btn-outline !px-12 !py-4 text-base">Let's Talk</a>
                     </div>
                 </motion.div>
             </div>
-
-            {/* Decorative lines or shapes could go here */}
         </section>
     );
 };

@@ -7,16 +7,19 @@ const Experience = () => {
         <section id="experience" className="w-full relative">
             <div className="section-container">
                 <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6 }}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
                     viewport={{ once: true }}
-                    className="mb-20 text-right"
+                    className="mb-24 text-center"
                 >
-                    <h2 className="text-4xl md:text-6xl font-black mb-4 uppercase tracking-tighter text-right gradient-text">
-                        My Journey
+                    <h2 className="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tighter">
+                        <span className="text-white">My</span>{" "}
+                        <span className="gradient-text !text-[50px] md:!text-[75px] ml-2">Journey</span>
                     </h2>
-                    <p className="text-gray-400 text-lg">The path from Electrical Engineering to Software Development.</p>
+                    <p className="text-gray-400 text-lg md:text-2xl max-w-3xl mx-auto leading-relaxed">
+                        A timeline of my professional growth, from Electrical Engineering foundations to Java Full Stack Development.
+                    </p>
                 </motion.div>
 
                 <div className="relative border-l-2 border-white/10 ml-4 md:ml-0 md:left-1/2">

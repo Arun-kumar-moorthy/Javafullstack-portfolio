@@ -5,33 +5,40 @@ import { FaWhatsapp } from "react-icons/fa6";
 
 const Contact = () => {
     return (
-        <section id="contact" className="w-full py-20">
-            <div className="section-container">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <section id="contact" className="w-full relative overflow-hidden">
+            <div className="section-container relative z-10">
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                    className="mb-24 text-center"
+                >
+                    <h2 className="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tighter">
+                        <span className="text-white">Let's</span>{" "}
+                        <span className="gradient-text !text-[50px] md:!text-[75px] ml-2">Connect</span>
+                    </h2>
+                    <p className="text-gray-400 text-lg md:text-2xl max-w-3xl mx-auto leading-relaxed">
+                        I'm always open to discussing new projects, entry-level opportunities, or just chatting about Java and backend engineering.
+                    </p>
+                </motion.div>
+
+                <div className="grid lg:grid-cols-2 gap-16 items-start">
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="text-4xl md:text-7xl font-black mb-6 uppercase tracking-tighter">
-                            <LinearGradient gradient={["to left", "#9B5DE5, #7209B7"]}>
-                                Let's<br />Connect
-                            </LinearGradient>
-                        </h2>
-                        <p className="text-gray-400 text-lg md:text-xl mb-8 leading-relaxed">
-                            I'm always open to discussing new projects, entry-level opportunities, or just
-                            chatting about Java and backend engineering.
-                        </p>
 
                         <div className="space-y-6">
-                            <a href="mailto:aarunkumarkr@gmail.com" className="flex items-center gap-4 group">
+                            <a href="mailto:arunkmoorthy5@gmail.com" className="flex items-center gap-4 group">
                                 <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-primary group-hover:bg-primary/10 transition-all">
                                     <FiMail className="text-xl group-hover:text-primary" />
                                 </div>
                                 <div>
                                     <span className="text-xs text-gray-500 uppercase font-bold tracking-widest block">Email</span>
-                                    <span className="text-lg font-bold">aarunkumarkr@gmail.com</span>
+                                    <span className="text-lg font-bold group-hover:text-primary transition-colors">arunkmoorthy5@gmail.com</span>
                                 </div>
                             </a>
 
